@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Um negócio a seu serviço · Akemy Mory</title>
+<meta name="description" content="Um diagnóstico em 4 capítulos e 12 perguntas para mulheres que empreendem: por que você começou, se trabalha como dona ou como funcionária do próprio negócio, quanto vale a sua hora e para onde quer ir.">
+<meta property="og:title" content="Um negócio a seu serviço">
+<meta property="og:description" content="Por que você vive no caos e como o seu negócio pode trabalhar para você. Um diagnóstico em 12 perguntas, com a conta do valor mínimo da sua hora.">
+<meta property="og:image" content="https://akemymory.com/img/um-negocio/capa.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&family=IBM+Plex+Mono&display=swap">
+<style>
+:root{--bg:#ebe6de;--bg2:#d8d0c3;--ink:#1c1917;--mute:#635b52;--terra:#9a4a2c;--terra2:#7a3a22;--dark:#2b2521;--paper:#ece6dc;--line:rgba(28,25,23,.4)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:500 21px/1.5 "Cormorant Garamond",Georgia,serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--terra)}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+.n{max-width:760px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.k{font:500 13px/1.4 Inter,system-ui,sans-serif;letter-spacing:.2em;color:var(--mute);text-transform:uppercase}
+h1,h2{font-family:"Instrument Serif","Times New Roman",serif;font-weight:400;text-transform:uppercase;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(46px,7vw,92px);line-height:.93}
+h2{font-size:clamp(36px,4.6vw,58px);line-height:1}
+h3{margin:0;font-size:25px;font-weight:600;line-height:1.2}
+p{margin:0}
+.lead{font-size:23px;line-height:1.45}
+.stack{display:flex;flex-direction:column;gap:20px}
+.c{text-align:center;align-items:center}
+.btn{display:inline-block;background:var(--terra);color:var(--paper);font:500 15px Inter,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:20px 34px;min-height:48px;text-align:center}
+.btn:hover{background:var(--terra2);color:var(--paper)}
+.small{font:400 13px/1.5 Inter,system-ui,sans-serif;letter-spacing:.06em;color:var(--mute)}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+.dark{background:var(--dark);color:var(--paper)}
+.dark .k,.dark .small{color:#b3a99c}
+.alt{background:var(--bg2)}
+.page{box-shadow:0 18px 40px rgba(28,25,23,.22),0 2px 6px rgba(28,25,23,.14);background:#fff}
+/* hero */
+.hero{display:flex;flex-wrap:wrap;gap:56px;align-items:center;padding:72px 24px 88px}
+.hero .t{flex:999 1 440px;min-width:0}
+.hero .i{flex:1 1 300px;min-width:0;display:flex;justify-content:center}
+.hero .i img{width:min(360px,100%)}
+/* method */
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.steps li{display:grid;grid-template-columns:72px 1fr;gap:4px 20px;border-top:1px solid var(--line);padding:22px 0}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps .num{font:400 64px/.85 "Instrument Serif",serif;color:var(--terra);grid-row:span 2}
+.steps p{font-size:19px;color:var(--mute)}
+.result{border:1px solid var(--terra);padding:22px 24px;text-align:center;margin-top:28px}
+/* demo */
+.grid2{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+.grid2>*{flex:1 1 320px;min-width:0}
+.chat{display:flex;flex-direction:column;gap:14px}
+.me,.ai{font:400 15px/1.55 "IBM Plex Mono",ui-monospace,monospace;padding:12px 16px;max-width:88%}
+.me{align-self:flex-end;background:var(--terra);color:var(--paper)}
+.ai{align-self:flex-start;background:var(--bg2)}
+.pages{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.pages figure{margin:0;flex:1 1 200px;max-width:260px;display:flex;flex-direction:column;gap:10px}
+.pages figcaption{font:400 13px/1.4 Inter,sans-serif;letter-spacing:.04em;color:var(--mute);text-align:center}
+/* for who */
+.cols{display:flex;flex-wrap:wrap;gap:40px}
+.cols>div{flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.cols ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
+.cols li{border-top:1px solid var(--line);padding-top:12px;font-size:20px;line-height:1.4}
+/* offer */
+.items{display:flex;flex-direction:column}
+.items div{display:flex;gap:18px;align-items:baseline;border-top:1px solid rgba(236,230,220,.3);padding:18px 0}
+.items div:last-child{border-bottom:1px solid rgba(236,230,220,.3)}
+.items span:first-child{font:500 13px Inter,sans-serif;letter-spacing:.08em;color:#d39a7c;min-width:24px}
+.items b{font-weight:600}
+.price{font:400 clamp(88px,12vw,150px)/.9 "Instrument Serif",serif}
+.conta{width:100%;border-collapse:collapse;font:400 17px/1.4 "Cormorant Garamond",serif}.conta td{border-top:1px solid var(--line);padding:10px 0}.conta td:last-child{text-align:right;font-family:"IBM Plex Mono",monospace;font-size:15px;white-space:nowrap;padding-left:16px}.conta tr.tot td{font-weight:600}
+/* faq */
+.faq{display:flex;flex-direction:column;gap:28px}
+.faq div{display:flex;flex-direction:column;gap:6px}
+footer{border-top:1px solid var(--line);padding:28px 24px 40px;text-align:center}
+@media (max-width:600px){section{padding:64px 0}.w.hero{padding:48px 20px 64px;gap:40px}.w,.n{padding:0 20px}.steps li{grid-template-columns:52px 1fr}.steps .num{font-size:48px}.btn{width:100%}}
+</style>
+</head>
+<body>
+
+<header class="w hero">
+  <div class="t stack">
+    <div class="k">Akemy Mory  [ Um negócio ]</div>
+    <h1>Um negócio a seu serviço</h1>
+    <p class="lead">Para mulheres que empreendem e trabalham muito, mas sentem que o negócio não sai do lugar. Um diagnóstico em 12 perguntas para entender por que você começou, como trabalha hoje, quanto vale a sua hora e para onde quer ir.</p>
+    <div><a class="btn" href="#oferta">Quero fazer o diagnóstico</a></div>
+    <p class="small">Ebook com 4 capítulos + conversa guiada com a IA · R$ 27</p>
+  </div>
+  <div class="i"><img class="page" src="../img/um-negocio/capa.jpg" alt="Capa do ebook Um negócio a seu serviço" width="641" height="910"></div>
+</header>
+
+<section class="alt">
+  <div class="n stack c">
+    <div class="k">A frase que eu mais escuto</div>
+    <h2>“Se eu soubesse me organizar, eu conseguiria.”</h2>
+    <p class="lead">A confeiteira que sai do emprego e ainda produz encomendas até as dez da noite, sem saber quanto ganha com aquilo. A dona do estúdio com agenda cheia que nunca consegue colocar as coisas em ordem. Planner, aplicativo, acordar mais cedo. Funciona por uma semana. Depois, o caos volta.</p>
+    <p class="lead"><b style="font-weight:600">O caos volta porque o problema não é só organização.</b> Dizer sim para tudo, cobrar olhando para a concorrência, misturar o dinheiro da casa com o do negócio, trocar de foco toda semana. Parecem problemas separados. São sintomas da mesma causa: falta direção. E, sem direção, você vira funcionária do próprio negócio.</p>
+  </div>
+</section>
+
+<section>
+  <div class="n stack">
+    <div class="stack c">
+      <div class="k">O diagnóstico</div>
+      <h2>Quatro capítulos, três perguntas cada</h2>
+      <p class="lead">Não é um curso de gestão. É um olhar honesto para o seu negócio, com a minha história como exemplo e perguntas que você responde no seu ritmo.</p>
+    </div>
+    <ol class="steps">
+      <li><span class="num">1</span><h3>Por que você empreende</h3><p>O que te trouxe até aqui e se o negócio te dá o que você queria quando começou.</p></li>
+      <li><span class="num">2</span><h3>Funcionária ou dona do negócio</h3><p>Quem decide o seu preço e a sua agenda, e se você está construindo algo ou só trocando horas por dinheiro.</p></li>
+      <li><span class="num">3</span><h3>O valor e o preço</h3><p>Os dois lados de todo preço: quanto o trabalho custa para você e quanto vale para quem contrata.</p></li>
+      <li><span class="num">4</span><h3>A direção</h3><p>O que é viver do seu negócio para você, e a conta que mostra o valor mínimo da sua hora.</p></li>
+    </ol>
+    <div class="result">
+      <div class="k" style="color:var(--terra)">No fim, você sai com</div>
+      <p class="lead" style="margin-top:6px">o seu porquê, o seu número e o próximo passo</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="w stack">
+    <div class="stack c">
+      <div class="k">Como fica na prática</div>
+      <h2>Por escrito ou conversando</h2>
+      <p class="lead" style="max-width:720px">Você pode responder nos campos de cada capítulo. Se escrever te trava, copie o texto pronto e cole no ChatGPT, no Claude ou na IA que você usa. Ela faz as doze perguntas, uma de cada vez, e monta a conta com você.</p>
+    </div>
+    <div class="pages" style="margin-top:24px">
+      <figure><img class="page" src="../img/um-negocio/perguntas.jpg" alt="Página do capítulo 1 com as perguntas" loading="lazy" width="641" height="910"><figcaption>As perguntas de cada capítulo</figcaption></figure>
+      <figure><img class="page" src="../img/um-negocio/prompt.jpg" alt="Página com o texto para colar na IA" loading="lazy" width="641" height="910"><figcaption>O texto pronto para colar na IA</figcaption></figure>
+      <figure><img class="page" src="../img/um-negocio/conta.jpg" alt="Página da conta do valor mínimo da hora" loading="lazy" width="641" height="910"><figcaption>A conta da sua hora</figcaption></figure>
+    </div>
+    <div class="n" style="margin-top:40px">
+      <div class="k" style="text-align:center;margin-bottom:12px">Exemplo da conta</div>
+      <table class="conta">
+        <tr><td>Quanto você precisa para viver</td><td>R$ 4.000</td></tr>
+        <tr><td>Quanto custa o seu negócio</td><td>R$ 1.500</td></tr>
+        <tr><td>Quanto você quer guardar ou reinvestir</td><td>R$ 500</td></tr>
+        <tr class="tot"><td>Quanto o negócio precisa faturar</td><td>R$ 6.000</td></tr>
+        <tr><td>Horas por mês (todas, não só as de atendimento)</td><td>120 h</td></tr>
+        <tr class="tot"><td>Valor mínimo da sua hora</td><td>R$ 50</td></tr>
+      </table>
+      <p class="small" style="margin-top:12px;text-align:center">Valores de exemplo. No livro, você preenche com os seus números.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="w stack">
+    <div class="stack c"><div class="k">Antes de decidir</div><h2>Para quem é</h2></div>
+    <div class="cols" style="margin-top:16px">
+      <div>
+        <h3>É para você se</h3>
+        <ul>
+          <li>Você empreende, ou quer empreender, e nunca estudou como um negócio funciona.</li>
+          <li>Você trabalha muito e não sabe se está tendo lucro.</li>
+          <li>Você define o preço olhando para a concorrência.</li>
+          <li>Você sente que virou funcionária do próprio negócio.</li>
+          <li>Você quer decidir para onde ir antes de mudar o preço ou abrir mais uma frente.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Não é para você se</h3>
+        <ul>
+          <li>Você procura uma fórmula de faturamento rápido.</li>
+          <li>Você quer um plano de marketing ou de vendas pronto.</li>
+          <li>Você já conhece os seus números e cobra pelo valor que entrega.</li>
+          <li>O que você precisa agora é organizar a semana. Para isso existe o <a href="../7-dias/"><em>7 dias para tirar a vida da cabeça</em></a>.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="oferta">
+  <div class="n stack">
+    <div class="stack c"><div class="k">O que você recebe</div><h2>O diagnóstico do seu negócio</h2></div>
+    <div class="items" style="margin-top:16px">
+      <div><span>01</span><p><b>O ebook</b> <em>Um negócio a seu serviço</em>, com quatro capítulos e espaço para responder às doze perguntas.</p></div>
+      <div><span>02</span><p><b>Um texto pronto para colar na IA</b>, que conduz o diagnóstico em forma de conversa e monta a conta com você.</p></div>
+      <div><span>03</span><p><b>A conta do valor mínimo da sua hora</b>, com um exemplo preenchido para você seguir.</p></div>
+      <div><span>04</span><p><b>Um exercício para as próximas 24 horas</b>, que mostra para onde vai o seu tempo e por onde começar a fazer menos.</p></div>
+    </div>
+    <div class="stack c" style="margin-top:40px">
+      <div class="k">Pagamento único</div>
+      <div class="price">R$ 27</div>
+      <p class="small">Acesso imediato na área de membros</p>
+      <a class="btn" href="https://pay.hotmart.com/I108264336G?checkoutMode=10">Quero fazer o diagnóstico</a>
+      <p class="small" style="max-width:520px">Garantia de 15 dias. Se não for para você, é só pedir o reembolso pela Hotmart, sem precisar explicar.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="w grid2">
+    <div><img src="../img/akemy-mesa.jpg" alt="Akemy Mory à mesa de trabalho" loading="lazy" style="width:100%;max-height:560px;object-fit:cover"></div>
+    <div class="stack">
+      <div class="k">Quem escreveu</div>
+      <h2>Akemy Mory</h2>
+      <p>Empreendo desde 2016, quando abri a minha empresa de fotografia no Brasil. Fotografei mais de cinquenta casamentos e, por fora, parecia um negócio que dava certo. Por dentro, eu cobrava barato, misturava o dinheiro da empresa com o meu e nunca sobrava nada.</p>
+      <p>Depois de recomeçar do zero em Portugal e na Holanda, aprendi a olhar para os números e a cobrar pelo que entrego. O mesmo tipo de serviço que eu fazia por 400 euros por mês, hoje faço por 1.150. Este material é o atalho que eu gostaria de ter tido.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="n stack">
+    <h2 style="text-align:center">Dúvidas</h2>
+    <div class="faq" style="margin-top:16px">
+      <div><h3>Ainda não tenho um negócio. Serve para mim?</h3><p>Serve. Nas perguntas sobre o dia a dia, você se imagina no lugar de quem já começou. A conta da hora ajuda a definir o preço antes de abrir.</p></div>
+      <div><h3>Preciso usar inteligência artificial?</h3><p>Não. Você pode responder por escrito, nos campos do livro. A conversa com a IA é um caminho a mais para quem trava ao escrever.</p></div>
+      <div><h3>Quanto tempo leva?</h3><p>São quatro capítulos curtos. Dá para fazer numa tarde, ou um capítulo por dia.</p></div>
+      <div><h3>Vou sair sabendo o preço que devo cobrar?</h3><p>Você sai sabendo o valor mínimo da sua hora e o que fazer para descobrir quanto ela vale hoje. O preço vem depois disso, com os seus números na mão.</p></div>
+      <div><h3>Como eu recebo?</h3><p>Logo depois da compra, você recebe um e-mail da Hotmart com o acesso à área de membros, onde está o ebook.</p></div>
+      <div><h3>E se não for para mim?</h3><p>Você tem 15 dias de garantia. É só pedir o reembolso pela Hotmart.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="n stack c">
+    <h2>Organização sem direção fica vazia</h2>
+    <p class="lead">E direção sem organização não sai do papel. Comece pela pergunta que vem antes de todas as outras: para onde você quer levar o seu negócio.</p>
+    <a class="btn" href="https://pay.hotmart.com/I108264336G?checkoutMode=10">Quero fazer o diagnóstico · R$ 27</a>
+  </div>
+</section>
+
+<footer class="small">AKEMY MORY  ·  <a href="https://instagram.com/akemymory" style="color:inherit">@AKEMYMORY</a>  ·  <a href="mailto:contact@akemymory.com" style="color:inherit">CONTACT@AKEMYMORY.COM</a></footer>
+
+</body>
+</html>
