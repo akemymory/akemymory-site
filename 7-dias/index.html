@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7 dias para tirar a vida da cabeça · Akemy Mory</title>
+<meta name="description" content="Um método de 7 passos para mulheres que empreendem e sentem que a cabeça não desliga. Em uma semana, você monta com a IA uma assistente que organiza o seu dia.">
+<meta property="og:title" content="7 dias para tirar a vida da cabeça">
+<meta property="og:description" content="O método Semana Possível: tire a vida da cabeça e monte uma assistente de IA que organiza o seu dia.">
+<meta property="og:image" content="https://akemymory.com/img/7-dias/capa.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&family=IBM+Plex+Mono&display=swap">
+<style>
+:root{--bg:#ebe6de;--bg2:#d8d0c3;--ink:#1c1917;--mute:#635b52;--terra:#9a4a2c;--terra2:#7a3a22;--dark:#2b2521;--paper:#ece6dc;--line:rgba(28,25,23,.4)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:500 21px/1.5 "Cormorant Garamond",Georgia,serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--terra)}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+.n{max-width:760px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.k{font:500 13px/1.4 Inter,system-ui,sans-serif;letter-spacing:.2em;color:var(--mute);text-transform:uppercase}
+h1,h2{font-family:"Instrument Serif","Times New Roman",serif;font-weight:400;text-transform:uppercase;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(46px,7vw,92px);line-height:.93}
+h2{font-size:clamp(36px,4.6vw,58px);line-height:1}
+h3{margin:0;font-size:25px;font-weight:600;line-height:1.2}
+p{margin:0}
+.lead{font-size:23px;line-height:1.45}
+.stack{display:flex;flex-direction:column;gap:20px}
+.c{text-align:center;align-items:center}
+.btn{display:inline-block;background:var(--terra);color:var(--paper);font:500 15px Inter,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:20px 34px;min-height:48px;text-align:center}
+.btn:hover{background:var(--terra2);color:var(--paper)}
+.small{font:400 13px/1.5 Inter,system-ui,sans-serif;letter-spacing:.06em;color:var(--mute)}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+.dark{background:var(--dark);color:var(--paper)}
+.dark .k,.dark .small{color:#b3a99c}
+.alt{background:var(--bg2)}
+.page{box-shadow:0 18px 40px rgba(28,25,23,.22),0 2px 6px rgba(28,25,23,.14);background:#fff}
+/* hero */
+.hero{display:flex;flex-wrap:wrap;gap:56px;align-items:center;padding:72px 24px 88px}
+.hero .t{flex:999 1 440px;min-width:0}
+.hero .i{flex:1 1 300px;min-width:0;display:flex;justify-content:center}
+.hero .i img{width:min(360px,100%)}
+/* method */
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.steps li{display:grid;grid-template-columns:72px 1fr;gap:4px 20px;border-top:1px solid var(--line);padding:22px 0}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps .num{font:400 64px/.85 "Instrument Serif",serif;color:var(--terra);grid-row:span 2}
+.steps p{font-size:19px;color:var(--mute)}
+.result{border:1px solid var(--terra);padding:22px 24px;text-align:center;margin-top:28px}
+/* demo */
+.grid2{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+.grid2>*{flex:1 1 320px;min-width:0}
+.chat{display:flex;flex-direction:column;gap:14px}
+.me,.ai{font:400 15px/1.55 "IBM Plex Mono",ui-monospace,monospace;padding:12px 16px;max-width:88%}
+.me{align-self:flex-end;background:var(--terra);color:var(--paper)}
+.ai{align-self:flex-start;background:var(--bg2)}
+.pages{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.pages figure{margin:0;flex:1 1 200px;max-width:260px;display:flex;flex-direction:column;gap:10px}
+.pages figcaption{font:400 13px/1.4 Inter,sans-serif;letter-spacing:.04em;color:var(--mute);text-align:center}
+/* for who */
+.cols{display:flex;flex-wrap:wrap;gap:40px}
+.cols>div{flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.cols ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
+.cols li{border-top:1px solid var(--line);padding-top:12px;font-size:20px;line-height:1.4}
+/* offer */
+.items{display:flex;flex-direction:column}
+.items div{display:flex;gap:18px;align-items:baseline;border-top:1px solid rgba(236,230,220,.3);padding:18px 0}
+.items div:last-child{border-bottom:1px solid rgba(236,230,220,.3)}
+.items span:first-child{font:500 13px Inter,sans-serif;letter-spacing:.08em;color:#d39a7c;min-width:24px}
+.items b{font-weight:600}
+.price{font:400 clamp(88px,12vw,150px)/.9 "Instrument Serif",serif}
+/* faq */
+.faq{display:flex;flex-direction:column;gap:28px}
+.faq div{display:flex;flex-direction:column;gap:6px}
+footer{border-top:1px solid var(--line);padding:28px 24px 40px;text-align:center}
+@media (max-width:600px){section{padding:64px 0}.w.hero{padding:48px 20px 64px;gap:40px}.w,.n{padding:0 20px}.steps li{grid-template-columns:52px 1fr}.steps .num{font-size:48px}.btn{width:100%}}
+</style>
+</head>
+<body>
+
+<header class="w hero">
+  <div class="t stack">
+    <div class="k">Akemy Mory  [ 7 dias ]</div>
+    <h1>7 dias para tirar a vida da cabeça</h1>
+    <p class="lead">Para mulheres que empreendem sozinhas e sentem que a cabeça não desliga. Em sete passos, você tira o que pesa da cabeça e monta, com a IA que já usa, uma assistente que organiza o seu dia dentro do tempo que você tem de verdade.</p>
+    <div><a class="btn" href="#oferta">Quero começar</a></div>
+    <p class="small">Ebook + Kit de templates + 1 e-mail por dia · R$ 97</p>
+  </div>
+  <div class="i"><img class="page" src="../img/7-dias/capa.jpg" alt="Capa do ebook 7 dias para tirar a vida da cabeça" width="642" height="909"></div>
+</header>
+
+<section class="alt">
+  <div class="n stack c">
+    <div class="k">Talvez você conheça esta cena</div>
+    <h2>São onze da noite. O corpo já desligou, a cabeça não.</h2>
+    <p class="lead">A encomenda de sábado, o prazo de amanhã, a mensagem que ficou sem resposta, o curso que você quer lançar há dois anos. Você promete que amanhã vai ser diferente. E, amanhã, a lista acorda antes de você.</p>
+    <p class="lead">Agenda nova, aplicativo, acordar às cinco, lista de vinte itens no domingo. Funciona por uma semana, às vezes duas. Depois o caos volta, e com ele a culpa.</p>
+    <p class="lead"><b style="font-weight:600">Não é falta de disciplina.</b> É que você está pedindo para a sua cabeça guardar tudo, lembrar de tudo e decidir tudo, o tempo inteiro. Esse trabalho não é dela.</p>
+  </div>
+</section>
+
+<section>
+  <div class="n stack">
+    <div class="stack c">
+      <div class="k">O método</div>
+      <h2>Semana Possível</h2>
+      <p class="lead">Uma semana montada a partir do tempo e da energia que você tem de verdade, e não do que você gostaria de ter. Você decide uma vez. A assistente segura o resto.</p>
+    </div>
+    <ol class="steps">
+      <li><span class="num">1</span><h3>Tirar tudo da cabeça</h3><p>O descarrego da noite, num lugar só.</p></li>
+      <li><span class="num">2</span><h3>Ver o tempo de verdade</h3><p>Suas horas reais e quantas tarefas cabem num dia.</p></li>
+      <li><span class="num">3</span><h3>Dia ruim também conta</h3><p>Uma versão pequena para os dias em que nada sai como o plano.</p></li>
+      <li><span class="num">4</span><h3>Decidir antes, não na hora</h3><p>Um tema por dia e regras simples, para não decidir tudo de novo.</p></li>
+      <li><span class="num">5</span><h3>Folga também é plano</h3><p>Descanso protegido, que não some quando aperta.</p></li>
+      <li><span class="num">6</span><h3>Menos frentes, nenhuma ideia perdida</h3><p>Duas frentes ativas e um lugar seguro para o resto.</p></li>
+      <li><span class="num">7</span><h3>A revisão é uma conversa</h3><p>Uma revisão semanal que ajusta o sistema, sem cobrança.</p></li>
+    </ol>
+    <div class="result">
+      <div class="k" style="color:var(--terra)">No dia 7, os sete passos viram</div>
+      <p class="lead" style="margin-top:6px">a sua assistente, que organiza o seu dia</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="w stack">
+    <div class="stack c">
+      <div class="k">Como fica na prática</div>
+      <h2>Um capítulo e uma conversa por dia</h2>
+      <p class="lead" style="max-width:720px">Cada dia tem um capítulo curto e um exercício pronto para colar na IA. Ela faz as perguntas, uma por vez, e escreve uma parte das instruções da sua assistente. Depois do sétimo dia, é só escrever “bom dia”.</p>
+    </div>
+    <div class="grid2" style="margin-top:24px">
+      <div class="pages">
+        <figure><img class="page" src="../img/7-dias/exercicio.jpg" alt="Página de exercício com a IA" loading="lazy" width="642" height="909"><figcaption>O exercício do dia, pronto para colar</figcaption></figure>
+        <figure><img class="page" src="../img/7-dias/semana-numa-pagina.jpg" alt="A semana inteira numa página" loading="lazy" width="642" height="909"><figcaption>A semana inteira, numa página</figcaption></figure>
+      </div>
+      <div class="chat">
+        <div class="small mono">(numa quarta de manhã)</div>
+        <div class="me">bom dia</div>
+        <div class="ai">Bom dia! Hoje é dia de marketing. 1. Fotografar as peças novas (principal). 2. Responder as encomendas, 15 minutos. 3. Agendar dois posts. A cozinha fecha às 20h.</div>
+        <div class="me">dormi mal, energia 2</div>
+        <div class="ai">Então hoje é dia ruim, e tudo bem. Fica só o que tem prazo: responder as encomendas. As fotos vão para sexta. Amanhã o seu dia começa mais leve.</div>
+        <p class="small">Exemplo de conversa com a assistente de uma confeiteira, montada com o livro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="w stack">
+    <div class="stack c"><div class="k">Antes de decidir</div><h2>Para quem é</h2></div>
+    <div class="cols" style="margin-top:16px">
+      <div>
+        <h3>É para você se</h3>
+        <ul>
+          <li>Você empreende sozinha e faz de tudo um pouco no seu negócio.</li>
+          <li>A sua cabeça segue ligada à noite, repassando o que ficou para trás.</li>
+          <li>Você já tentou agenda, aplicativo e planner, e nada durou.</li>
+          <li>Você quer um sistema que funcione também nos dias ruins.</li>
+          <li>Você já usa, ou quer usar, o ChatGPT, o Claude ou o Gemini.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Não é para você se</h3>
+        <ul>
+          <li>Você procura um curso de aplicativos de produtividade.</li>
+          <li>Você quer um jeito de fazer mais coisas no mesmo dia.</li>
+          <li>Você espera que a IA faça o trabalho por você.</li>
+          <li>Você precisa decidir a direção do negócio. Para isso existe o <em>Um negócio a seu serviço</em>.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="oferta">
+  <div class="n stack">
+    <div class="stack c"><div class="k">O que você recebe</div><h2>Tudo para a sua semana possível</h2></div>
+    <div class="items" style="margin-top:16px">
+      <div><span>01</span><p><b>O ebook</b> <em>7 dias para tirar a vida da cabeça</em>, com os sete passos do método Semana Possível.</p></div>
+      <div><span>02</span><p><b>9 prompts prontos para colar</b> na IA que você usa, um para cada etapa da montagem da sua assistente.</p></div>
+      <div><span>03</span><p><b>O Kit Semana Possível</b>: 7 templates, um por dia, em PDF para imprimir e em versão no Notion.</p></div>
+      <div><span>04</span><p><b>Um e-mail por dia</b> durante a semana, para te acompanhar em cada passo.</p></div>
+    </div>
+    <div class="stack c" style="margin-top:40px">
+      <div class="k">Pagamento único</div>
+      <div class="price">R$ 97</div>
+      <p class="small">Acesso imediato na área de membros</p>
+      <a class="btn" href="https://pay.hotmart.com/Y108176624F?checkoutMode=10">Quero a minha semana possível</a>
+      <p class="small" style="max-width:520px">Garantia de 15 dias. Se não for para você, é só pedir o reembolso pela Hotmart, sem precisar explicar.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="w grid2">
+    <div><img src="../img/akemy-mesa.jpg" alt="Akemy Mory à mesa de trabalho" loading="lazy" style="width:100%;max-height:560px;object-fit:cover"></div>
+    <div class="stack">
+      <div class="k">Quem escreveu</div>
+      <h2>Akemy Mory</h2>
+      <p>Empreendo desde 2016, quando abri a minha empresa de fotografia no Brasil. Desde então, mudei de país duas vezes, recomecei do zero, fotografei, cuidei do marketing de outros negócios e passei anos fazendo de tudo um pouco, sempre cansada e com a sensação de que fazia menos do que devia.</p>
+      <p>Não me faltava trabalho nem vontade. Faltava um jeito de fazer caber tudo sem que a cabeça ficasse ligada o tempo inteiro. Montei esse sistema com livros, pesquisa e muita tentativa e erro. Tudo o que está no livro eu uso na minha própria semana.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="n stack">
+    <h2 style="text-align:center">Dúvidas</h2>
+    <div class="faq" style="margin-top:16px">
+      <div><h3>Preciso saber usar inteligência artificial?</h3><p>Não. Você só copia o texto do exercício, cola na IA e responde às perguntas. Se escrever te trava, dá para responder por áudio.</p></div>
+      <div><h3>Qual IA eu uso?</h3><p>A que você já usa: ChatGPT, Claude ou Gemini. A conta gratuita funciona.</p></div>
+      <div><h3>Quanto tempo leva por dia?</h3><p>Um capítulo curto e uma conversa com a IA. E cada dia tem uma versão pequena para os dias corridos.</p></div>
+      <div><h3>E se eu pular um dia?</h3><p>Tudo bem. Você retoma de onde parou. O método foi feito para funcionar também quando a semana não sai como o plano.</p></div>
+      <div><h3>Funciona sem IA?</h3><p>Sim. Os exercícios também funcionam no papel, com o Kit impresso.</p></div>
+      <div><h3>Como eu recebo?</h3><p>Logo depois da compra, você recebe um e-mail da Hotmart com o acesso à área de membros, onde estão o ebook e o Kit.</p></div>
+      <div><h3>E se não for para mim?</h3><p>Você tem 15 dias de garantia. É só pedir o reembolso pela Hotmart.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="n stack c">
+    <h2>Comece hoje à noite</h2>
+    <p class="lead">Na primeira noite, você tira tudo da cabeça e coloca num lugar só. No sétimo dia, a sua assistente está pronta para organizar o seu dia por você.</p>
+    <a class="btn" href="https://pay.hotmart.com/Y108176624F?checkoutMode=10">Quero começar · R$ 97</a>
+  </div>
+</section>
+
+<footer class="small">AKEMY MORY  ·  <a href="https://instagram.com/akemymory" style="color:inherit">@AKEMYMORY</a>  ·  <a href="mailto:contact@akemymory.com" style="color:inherit">CONTACT@AKEMYMORY.COM</a></footer>
+
+</body>
+</html>
