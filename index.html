@@ -3,16 +3,125 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Akemy Mory</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500&display=swap">
+<title>Akemy Mory · Organização e negócio para mulheres que empreendem</title>
+<meta name="description" content="Materiais da Akemy Mory para mulheres que empreendem sozinhas: tirar a vida da cabeça, organizar a semana com inteligência artificial e decidir para onde levar o negócio.">
+<meta property="og:title" content="Akemy Mory">
+<meta property="og:description" content="Organização e negócio para mulheres que empreendem sozinhas, com a ajuda da inteligência artificial.">
+<meta property="og:image" content="https://akemymory.com/img/akemy-mesa.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap">
 <style>
-body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#ebe6de;color:#1c1917;text-align:center;padding:24px;box-sizing:border-box}
-h1{font:400 clamp(48px,9vw,96px)/1 "Instrument Serif",serif;margin:0 0 16px;text-transform:uppercase}
-p{font:500 13px Inter,sans-serif;letter-spacing:.2em;color:#635b52;margin:0}
-a{color:#9a4a2c;text-decoration:none}
+:root{--bg:#ebe6de;--bg2:#d8d0c3;--ink:#1c1917;--mute:#635b52;--terra:#9a4a2c;--terra2:#7a3a22;--dark:#2b2521;--paper:#ece6dc;--line:rgba(28,25,23,.4)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:500 21px/1.5 "Cormorant Garamond",Georgia,serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--terra)}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.k{font:500 13px/1.4 Inter,system-ui,sans-serif;letter-spacing:.2em;color:var(--mute);text-transform:uppercase}
+h1,h2{font-family:"Instrument Serif","Times New Roman",serif;font-weight:400;text-transform:uppercase;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(56px,9vw,120px);line-height:.9}
+h2{font-size:clamp(36px,4.6vw,58px);line-height:1}
+h3{margin:0;font:400 clamp(28px,3vw,36px)/1.05 "Instrument Serif",serif;text-transform:uppercase}
+p{margin:0}
+.lead{font-size:23px;line-height:1.45}
+.stack{display:flex;flex-direction:column;gap:20px}
+.small{font:400 13px/1.5 Inter,system-ui,sans-serif;letter-spacing:.06em;color:var(--mute)}
+.btn{display:inline-block;background:var(--terra);color:var(--paper);font:500 14px Inter,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:18px 28px;min-height:48px;text-align:center}
+.btn:hover{background:var(--terra2);color:var(--paper)}
+.page{box-shadow:0 18px 40px rgba(28,25,23,.22),0 2px 6px rgba(28,25,23,.14);background:#fff}
+/* top */
+nav{display:flex;justify-content:space-between;align-items:center;padding:28px 24px 0;gap:16px}
+nav a{font:500 13px Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+nav .links{display:flex;gap:24px}
+.hero{padding:72px 24px 88px;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-end}
+.hero .t{flex:999 1 480px;min-width:0}
+.hero .i{flex:1 1 260px;min-width:0}
+.hero .i img{width:100%;aspect-ratio:4/5;object-fit:cover}
+/* cards */
+.alt{background:var(--bg2)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;margin-top:40px}
+.card{background:var(--bg);display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .2s}
+.card:hover{transform:translateY(-4px)}
+.card .cov{background:var(--dark);padding:40px 0;display:flex;justify-content:center}
+.card .cov img{width:min(210px,60%)}
+.card .body{padding:28px 28px 32px;display:flex;flex-direction:column;gap:14px;flex:1}
+.card .body p{font-size:19px;line-height:1.45}
+.card .meta{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:auto;padding-top:18px;border-top:1px solid var(--line)}
+.card .more{font:500 13px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+.card:hover .more{color:var(--terra2)}
+/* bio */
+.bio{display:flex;flex-wrap:wrap;gap:56px;align-items:center}
+.bio>div{flex:1 1 320px;min-width:0}
+.bio img{width:100%;max-height:600px;object-fit:cover}
+.route{font:500 13px Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--terra)}
+footer{border-top:1px solid var(--line);padding:28px 24px 40px;text-align:center}
+@media (max-width:600px){section{padding:64px 0}.hero{padding:56px 20px 64px;gap:40px}.hero .i img{aspect-ratio:1/1}.w{padding:0 20px}nav{padding:20px 20px 0}nav .links{gap:16px}.card .body{padding:24px 22px 28px}}
 </style>
 </head>
 <body>
-<div><h1>Akemy Mory</h1><p><a href="https://instagram.com/akemymory">@AKEMYMORY</a></p></div>
+
+<nav class="w"><a href="/">Akemy Mory</a><div class="links"><a href="#materiais">Materiais</a><a href="#sobre">Sobre</a></div></nav>
+
+<header class="w hero">
+  <div class="t stack">
+    <div class="k">Organização · Negócio · Inteligência artificial</div>
+    <h1>Akemy Mory</h1>
+    <p class="lead" style="max-width:620px">Materiais para mulheres que empreendem sozinhas e sentem que a cabeça não desliga. Para tirar a vida da cabeça, organizar a semana dentro do tempo que você tem de verdade e decidir para onde levar o seu negócio.</p>
+    <div><a class="btn" href="#materiais">Ver os materiais</a></div>
+  </div>
+  <div class="i"><img src="img/laptop-xicara.jpg" alt="Notebook e xícara sobre a mesa de trabalho" width="667" height="1000"></div>
+</header>
+
+<section class="alt" id="materiais">
+  <div class="w">
+    <div class="stack" style="text-align:center;align-items:center">
+      <div class="k">Materiais</div>
+      <h2>Por onde começar</h2>
+    </div>
+    <div class="cards">
+      <a class="card" href="7-dias/">
+        <div class="cov"><img class="page" src="img/7-dias/capa.jpg" alt="Capa do ebook 7 dias para tirar a vida da cabeça" width="642" height="909" loading="lazy"></div>
+        <div class="body">
+          <div class="k">Ebook + Kit de templates</div>
+          <h3>7 dias para tirar a vida da cabeça</h3>
+          <p>O método Semana Possível em sete passos. Você tira o que pesa da cabeça, descobre quanto tempo tem de verdade e monta, com a IA que já usa, uma assistente que organiza o seu dia, inclusive nos dias ruins.</p>
+          <div class="meta"><span class="small">R$ 97</span><span class="more">Conhecer →</span></div>
+        </div>
+      </a>
+      <a class="card" href="um-negocio/">
+        <div class="cov"><img class="page" src="img/um-negocio/capa.jpg" alt="Capa do ebook Um negócio a seu serviço" width="641" height="910" loading="lazy"></div>
+        <div class="body">
+          <div class="k">Ebook · Diagnóstico</div>
+          <h3>Um negócio a seu serviço</h3>
+          <p>Um diagnóstico em 12 perguntas: por que você empreende, se trabalha como dona ou como funcionária do próprio negócio, quanto vale o seu trabalho e para onde quer ir. Com a conta do valor mínimo da sua hora.</p>
+          <div class="meta"><span class="small">R$ 27</span><span class="more">Conhecer →</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="w bio">
+    <div><img src="img/akemy-mesa.jpg" alt="Akemy Mory à mesa de trabalho" loading="lazy" width="667" height="1000"></div>
+    <div class="stack">
+      <div class="k">Sobre</div>
+      <h2>Oi, eu sou a Akemy</h2>
+      <p class="route">Brasil → Portugal → Holanda</p>
+      <p>Empreendo desde 2016, quando abri a minha empresa de fotografia no Brasil. Fotografei mais de cinquenta casamentos e, por fora, parecia um negócio que dava certo. Por dentro, eu cobrava barato, misturava o dinheiro da empresa com o meu e vivia com a cabeça ligada.</p>
+      <p>Mudei de país duas vezes e recomecei do zero em cada uma. Limpei quartos de hotel, fui barista, cuidei do marketing de outros negócios e, por muito tempo, fiz de tudo um pouco, sempre cansada e com a sensação de que fazia menos do que devia.</p>
+      <p>O que mudou foi tirar tudo da cabeça e, só então, olhar para o negócio com honestidade. Hoje moro na Holanda, fotografo, faço marketing para clientes e escrevo materiais com o que eu uso na minha própria semana.</p>
+      <p><a href="https://instagram.com/akemymory">@akemymory</a> no Instagram</p>
+    </div>
+  </div>
+</section>
+
+<footer class="small">AKEMY MORY  ·  <a href="https://instagram.com/akemymory" style="color:inherit">@AKEMYMORY</a>  ·  <a href="mailto:contact@akemymory.com" style="color:inherit">CONTACT@AKEMYMORY.COM</a></footer>
+
 </body>
 </html>
