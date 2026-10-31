@@ -64,6 +64,12 @@ nav .links{display:flex;gap:24px}
 .bio img{width:100%;max-height:600px;object-fit:cover}
 .route{font:500 13px Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--terra)}
 footer{border-top:1px solid var(--line);padding:28px 24px 40px;text-align:center}
+nav.w{position:relative}
+.mbtn{display:none;background:none;border:0;padding:12px 4px;cursor:pointer;width:44px;height:44px;flex-direction:column;justify-content:center;align-items:flex-end;gap:7px}
+.mbtn span{display:block;width:24px;height:1.5px;background:var(--ink);transition:transform .2s}
+nav.open .mbtn span:first-child{transform:translateY(4.25px) rotate(45deg)}
+nav.open .mbtn span:last-child{transform:translateY(-4.25px) rotate(-45deg)}
+@media (max-width:600px){.mbtn{display:flex}nav.w .links{display:none;position:absolute;top:100%;left:0;right:0;z-index:10;background:var(--bg);flex-direction:column;gap:0;padding:8px 20px 16px;border-bottom:1px solid var(--line)}nav.open .links{display:flex}nav.w .links a{padding:14px 0;border-top:1px solid var(--line)}.hk{text-align:center}}
 @media (max-width:600px){section{padding:64px 0}.w.hero{padding:56px 20px 64px;gap:40px}.hero .i img{aspect-ratio:1/1}.w{padding:0 20px}nav.w{padding:20px 20px 0}nav .links{gap:16px}.card .body{padding:24px 22px 28px}}
 </style>
 <!-- Meta Pixel -->
@@ -81,11 +87,12 @@ fbq('track','PageView');
 </head>
 <body>
 
-<nav class="w"><a href="/">Akemy Mory</a><div class="links"><a href="#materiais">Materiais</a><a href="#sobre">Sobre</a></div></nav>
+<nav class="w"><a href="/">Akemy Mory</a><button class="mbtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button><div class="links" id="menu"><a href="#materiais">Materiais</a><a href="#sobre">Sobre</a></div></nav>
+<script>(function(){var n=document.querySelector('nav.w'),b=n.querySelector('.mbtn');b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fechar menu':'Abrir menu')});n.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');b.setAttribute('aria-expanded','false')})})})();</script>
 
 <header class="w hero">
   <div class="t stack">
-    <div class="k">Organização · Negócio · Inteligência artificial</div>
+    <div class="k hk">Negócio &amp; Inteligência artificial</div>
     <h1>Akemy Mory</h1>
     <p class="lead" style="max-width:620px">Materiais para mulheres que empreendem sozinhas e sentem que a cabeça não desliga. Para tirar a vida da cabeça, organizar a semana dentro do tempo que você tem de verdade e decidir para onde levar o seu negócio.</p>
     <div><a class="btn" href="#materiais">Ver os materiais</a></div>
