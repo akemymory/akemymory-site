@@ -246,5 +246,28 @@ fbq('track','PageView');
 
 <footer class="small">AKEMY MORY  ·  <a href="https://instagram.com/akemymory" style="color:inherit">@AKEMYMORY</a>  ·  <a href="mailto:contact@akemymory.com" style="color:inherit">CONTACT@AKEMYMORY.COM</a></footer>
 
+<!-- Repassa a origem da visita (UTMs do anúncio ou da bio) para o checkout da Hotmart -->
+<script>
+(function(){
+  var q = new URLSearchParams(location.search);
+  var keys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','src','sck','fbclid'];
+  var found = keys.filter(function(k){ return q.get(k); });
+  if (!found.length) return;
+  var src = q.get('src');
+  if (!src && q.get('utm_source')) {
+    var content = q.get('utm_content') || '';
+    var adId = content.indexOf('|') > -1 ? content.split('|').pop() : '';
+    src = [q.get('utm_source'), adId || q.get('utm_medium') || ''].filter(Boolean).join('_');
+  }
+  if (src) src = src.replace(/[^A-Za-z0-9_-]/g, '-').slice(0, 60);
+  document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function(a){
+    var url = new URL(a.href);
+    found.forEach(function(k){ if (k !== 'src') url.searchParams.set(k, q.get(k)); });
+    if (src) url.searchParams.set('src', src);
+    a.href = url.toString();
+  });
+})();
+</script>
+
 </body>
 </html>
